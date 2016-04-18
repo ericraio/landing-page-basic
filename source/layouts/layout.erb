@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta property="al:ios:url" content="radio50://" />
+    <meta property="al:ios:app_store_id" content="12345" />
+    <meta property="al:ios:app_name" content="Radio 5-0" />
+    <meta property="al:android:url" content="radio50://" />
+    <meta property="al:android:app_name" content="Radio 5-0" />
+    <meta property="al:android:package" content="com.atroapps.radio50" />
+    <meta property="al:web:url" content="https://getradio50.com" />
+
+    <meta property="fb:app_id" content="<%= facebook_app_id %>">
+    <meta property="og:title" content="Radio 5-0">
+    <meta property="og:image" content="https://fbstatic-a.akamaihd.net/images/devsite/attachment_blank.png">
+    <meta property="og:url" content="https://getradio50.com">
+    <meta property="og:type" content="radio-five-oh:feed">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:domain" content="getradio50.com">
+    <meta name="twitter:creator" content="@ericraio">
+    <meta name="twitter:creator:id" content="18918314">
+    <meta name="twitter:site" content="@ericraio">
+    <meta name="twitter:site:id" content="18918314">
+    <meta name="twitter:account_id" content="18918314">
+    <meta name="twitter:title" content="<%= twitter_title || page_title %>" />
+    <meta name="twitter:description" content="<%= page_description %>" />
+    <meta name="twitter:url" content="<%= page_url %>">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= page_title || "Police Scanner App - Radio 5-0" %></title>
+
+    <!-- GOOGLE FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Dosis:200,300,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+    <!-- FAV AND TOUCH ICONS
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="144x144" href="assets/ico/zi-favicon144x144.png">
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="114x114" href="assets/ico/zi-favicon114x114.png">
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="72x72" href="assets/ico/zi-favicon72x72.png">
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="57x57" href="assets/ico/zi-favicon57x57.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    -->
+
+    <%= stylesheet_link_tag :application %>
+  </head>
+
+  <body class="<%= page_classes %>">
+    <%= yield %>
+    <%= javascript_include_tag :application %>
+  </body>
+</html>
